@@ -1,0 +1,6 @@
+<div>{{dayDate(time.dt) | date: "HH:mm"}}</div>
+<div><img src={{weatherIcon(time.weather[0].icon)}} alt=""></div>
+<div>{{time.weather[0].description}}</div>
+<div>{{airTemperature(time.main.temp)}}<sup>o</sup></div>
+<div>{{airTemperature(time.main.feels_like)}}<sup>o</sup></div>
+<div>{{windSpeed(time.wind.speed)}}</div>

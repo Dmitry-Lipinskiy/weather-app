@@ -1,0 +1,47 @@
+.block-search {
+    width: 85%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: MediumSeaGreen;
+    text-shadow: 1px 1px 2px black;
+}
+
+.btn-search {
+    margin-left: 20px;
+}
+
+.contaiher-btn-days {
+    width: 100%;
+    padding: 0 7.5%;
+    background-color: MediumSeaGreen;
+}
+
+.btn-today,
+.btn-fiveDays {
+    margin: 7px 20px 7px 0;
+    padding: 5px 30px;
+    color: MediumSeaGreen;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+}
+
+.container-weaher-five-days {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+

@@ -1,0 +1,38 @@
+.container-weather-hourly{
+  width: 98%;
+  margin: 30px auto;
+  padding: 10px;
+  border: 2px solid MediumSeaGreen;
+  border-radius: 10px;
+  box-shadow: 0 0 7px 5px dimgrey;
+
+}
+
+h2 {
+  color: MediumSeaGreen;
+}
+
+.container-weather-hourly-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-weather-hourly-info-name, .block-weather-hourly-info {
+  margin: 10px 0;
+  padding: 5px;
+  border: 2px solid MediumSeaGreen;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.zero-image{
+  opacity: 0;
+}
+
+.btn-close {
+  color: MediumSeaGreen;
+}

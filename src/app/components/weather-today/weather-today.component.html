@@ -1,0 +1,32 @@
+<div class="weather-today-container">
+  <div class="weather-today-container-header">
+      <div>CURRENT WEATHER</div>
+      <div>{{todayDate(today.dt) | date: "dd.MM.yyyy"}}</div>
+  </div>
+  <div class="weather-today-container-info">
+      <div>
+          <img src={{weatherIcon(today.weather[0].icon)}} alt="">
+          <div>{{today.weather[0].description}}.</div>
+      </div>
+      <div>
+          <div class="info-air-temperature">{{airTemperature(today.main.temp)}}<sup>o</sup>C</div>
+          <div>Real Feel {{airTemperature(today.main.feels_like)}}<sup>o</sup></div>
+      </div>
+      <div>
+          <table>
+              <tr>
+                  <td>Sunrise:</td>
+                  <td>{{todayDate(today.sys.sunrise) | date: "HH:mm"}}</td>
+              </tr>
+              <tr>
+                  <td>Sunset:</td>
+                  <td>{{todayDate(today.sys.sunset) | date: "HH:mm"}}</td>
+              </tr>
+              <tr>
+                  <td>Duration:</td>
+                  <td>{{todayDuration(today.sys.sunset, today.sys.sunrise) | date: "HH:mm"}} hr</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+.weather-today-container {
+  width: 85%;
+  margin: 30px auto;
+  border: 2px solid MediumSeaGreen;
+  border-radius: 10px;
+  box-shadow: 0 0 7px 5px dimgrey;
+}
+
+.weather-today-container-header {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: MediumSeaGreen;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather-today-container-info {
+  width: 100%;
+  padding: 20px 0;
+  color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info-air-temperature {
+  color: dimgrey;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+td {
+  padding-left: 10px;
+}

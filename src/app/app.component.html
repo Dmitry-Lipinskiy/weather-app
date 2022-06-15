@@ -1,0 +1,36 @@
+<div class="container-search">
+    <div class="block-search">
+        <h1>MY WEATHER</h1>
+        <div class="block-input-search">
+            <mat-form-field class="example-form-field" appearance="standard">
+                <mat-label>City</mat-label>
+                <input matInput type="text" [(ngModel)]="inputValue">
+            </mat-form-field>
+
+            <button mat-raised-button class="btn-search" (click)="weatherToday(); fiveDaysForecast()">
+              <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="contaiher-btn-days">
+    <button mat-raised-button class="btn-today" (click)="showWeatherToday()" routerLink="/today">Today</button>
+    <button mat-raised-button class="btn-fiveDays" (click)="showWeatherFiveDays()" routerLink="/five-days">5-day forecast</button>
+</div>
+
+<div *ngIf="isWeatherTodayVisible">
+    <app-weather-today *ngIf="today"
+                        [today]="today">
+    </app-weather-today>
+</div>
+
+<div class="container-weaher-five-days" *ngIf="isWeatherFiveDaysVisible">
+    <app-weather-five-days *ngFor="let day of fiveDaysInfo"
+                            [day]="day"
+                            (click)="showWeatherHourly(day)">
+    </app-weather-five-days>
+</div>
+
+
+

@@ -1,0 +1,7 @@
+<div class="forecast-block">
+  <div class="forecast-week-day">{{dayDate(day.dt) | date: "EEEE"}}</div>
+  <div class="forecast-date">{{dayDate(day.dt) | date: "LLL dd"}}</div>
+  <div class="forecast-image"><img src={{weatherIcon(day.weather[0].icon)}} alt=""></div>
+  <div class="forecast-temperature">{{airTemperature(day.main.temp)}}<sup>o</sup>C</div>
+  <div class="forecast-description">{{day.weather[0].description}}</div>
+</div>
