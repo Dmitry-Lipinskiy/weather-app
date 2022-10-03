@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
         this.cityNameError = err.error;
         // console.log(this.cityNameError);
         this.dialog.open(WeatherErrorDialogComponent, {
-          width: "30%",
+          width: "40%",
           data: this.cityNameError
         });
       })

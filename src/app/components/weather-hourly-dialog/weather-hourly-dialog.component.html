@@ -1,17 +1,20 @@
 <div class="container-weather-hourly">
-  <h2>HOURLY</h2>
-  <div class="container-weather-hourly-info">
-      <div class="block-weather-hourly-info-name">
-          <div>{{dayDate(data[0].dt) | date: "EEEE"}}</div>
-          <img class="zero-image" src={{weatherIcon(data[0].weather[0].icon)}} alt="">
-          <div>Forecast</div>
-          <div>Temp (<sup>o</sup>C)</div>
-          <div>RealFeel</div>
-          <div>Wind (km/h)</div>
-      </div>
-      <app-weather-hourly class="block-weather-hourly-info" *ngFor="let time of data"
-                          [time]="time">
-      </app-weather-hourly>
+  <div class="container-weather-hourly-header">
+    <h2>HOURLY</h2>
+    <div class="container-weather-hourly-header-date">{{dayDate(data[0].dt) | date: "EEEE dd.MM.yyyy"}}</div>
+  </div>
+  <div mat-dialog-content class="container-weather-hourly-info">
+    <div class="block-weather-hourly-info-name">
+      <div>Time</div>
+      <img class="zero-image" src={{weatherIcon(data[0].weather[0].icon)}} alt="">
+      <div>Forecast</div>
+      <div>Temp (<sup>o</sup>C)</div>
+      <div>RealFeel</div>
+      <div>Wind (km/h)</div>
+    </div>
+    <app-weather-hourly class="block-weather-hourly-info" *ngFor="let time of data"
+                        [time]="time">
+    </app-weather-hourly>
   </div>
 </div>
 <mat-dialog-actions align="end">
